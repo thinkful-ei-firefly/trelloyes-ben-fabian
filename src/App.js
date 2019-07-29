@@ -1,6 +1,7 @@
 import React from 'react';
 import List from './List';
 import STORE from './store';
+import './App.css';
 
 function App() {
   const cardList = STORE.lists.map(card =>
@@ -9,12 +10,12 @@ function App() {
 
   return (
     <main className='App'>
-      <header>
-        <h1>Trelloyes</h1>
-        <div className='App-list'>
-          {cardList}
-        </div>
+      <header className="App-header">
+        <h1>Trelloyes!</h1>
       </header>
+      <div className='App-list'>
+        {cardList}
+      </div>
     </main>
   );
 }
