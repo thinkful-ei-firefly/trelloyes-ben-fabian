@@ -1,19 +1,19 @@
 import React from 'react';
 import Card from './Card';
 
-export default function Card(props){
+export default function List(props){
 	const cardList = props.cards.map(card =>
-        <Person title={card.title} content={card.content} />
+        <Card key={card.id} title={card.title} content={card.content} />
     );
 
 	return (
-		<section class="List">
-        <header class="List-header">
+		<section className="List">
+        <header className="List-header">
           <h2>{props.header}</h2>
         </header>
-        <div class="List-cards">
+        <div className="List-cards">
         	{cardList}
-            <button type="button" class="List-add-button">
+            <button type="button" className="List-add-button">
               + Add Random Card
             </button>
         </div>
